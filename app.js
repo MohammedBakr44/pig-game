@@ -67,7 +67,7 @@ $('.btn-hold').addEventListener('click', () => {
     $(`#current-${activePlayer}`).textContent = '0';
     roundScore = 0;
 
-    if (scores[activePlayer] >= 5) {
+    if (scores[activePlayer] >= 20) {
         $(`#name-${activePlayer}`).textContent = 'Winner';
         $('img.dice').style.display = 'none';
         $(`.player-${activePlayer}-panel`).classList.add('winner');
