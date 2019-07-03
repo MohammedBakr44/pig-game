@@ -9,7 +9,7 @@ GAME RULES:
 
 */
 
-let scores, roundScore, activePlayer, dice, gamePlaying;
+let scores, roundScore, activePlayer, dice, gamePlaying, winScore;
 
 init();
 
@@ -39,8 +39,26 @@ function init() {
     $(`.player-${activePlayer }-panel`).classList.add('active');
     $(`#name-${activePlayer}`).textContent = 'Player 1';
     $(`#name-${activePlayer + 1}`).textContent = 'Player 2';
+    $(".max__text").value = 0;
 
 }
+
+winScore = parseInt($(".max__text").value);
+console.log(winScore);
+
+$(".max__increase").addEventListener("click", () => {
+    winScore++;
+    $(".max__text").value = winScore;
+})
+
+$(".max__decrease").addEventListener("click", () => {
+    winScore--;
+    if(winScore < 0) {
+        winScore = 0;    
+    }
+
+    $(".max__text").value = winScore;
+})
 
 $('.btn-roll').addEventListener('click', () => {
     if (gamePlaying) {
@@ -62,12 +80,13 @@ $('.btn-roll').addEventListener('click', () => {
 });
 
 $('.btn-hold').addEventListener('click', () => {
+    $('img.dice').style.display = 'none';
     scores[activePlayer] += roundScore;
     $(`#score-${activePlayer}`).textContent = scores[activePlayer];
     $(`#current-${activePlayer}`).textContent = '0';
     roundScore = 0;
 
-    if (scores[activePlayer] >= 20) {
+    if (scores[activePlayer] >= winScore) {
         $(`#name-${activePlayer}`).textContent = 'Winner';
         $('img.dice').style.display = 'none';
         $(`.player-${activePlayer}-panel`).classList.add('winner');
@@ -84,4 +103,12 @@ $('.btn-hold').addEventListener('click', () => {
 
 $('.btn-new').addEventListener('click', () => {
     init();
+})
+
+window.addEventListener("focus", () => {
+    document.title = "pig game"
+})
+
+window.addEventListener("blur", () => {
+    document.title = "خد هنا رايح فين xD"
 })
