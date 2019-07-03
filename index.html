@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
         <link rel="icon" href="dice-5.png" />
         <link type="text/css" rel="stylesheet" href="style.css">
         
@@ -29,14 +29,26 @@
                     <div class="player-current-score" id="current-1">0</div>
                 </div>
             </div>
-            
-            <button class="btn-new"><i class="fas fa-plus-circle"></i>New game</button>
-            <button class="btn-roll"><i class="fas fa-dice"></i>Roll dice</button>
-            <button class="btn-hold"><i class="fas fa-download"></i>Hold</button>
+            <p class="winScore">
+                Define win score
+            </p>
+            <div class="max">
+                <input type="text" name="max" class="max__text" readonly>
+                <button class="max__increase">
+                    <i class="fas fa-angle-up"></i>
+                </button>
+                <button class="max__decrease">
+                    <i class="fas fa-angle-down"></i>
+                </button>
+            </div>
+            <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+            <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+            <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
             
             <img src="dice-5.png" alt="Dice" class="dice">
         </div>
         <script src="mySelector.js"></script>
         <script src="app.js"></script>
+        <script src="https://kit.fontawesome.com/aebba2acce.js"></script>
     </body>
 </html>
