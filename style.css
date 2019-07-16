@@ -173,8 +173,6 @@ p.winScore {
   color: #333C48;
   outline: 0;
   border: none;
-  /* border-bottom: 2px solid #8498a7;
-  border-top: 2px solid #8498a7; */
   background: #f1f1f1;
   box-shadow: -2px -1px 8px 0px rgba(0, 0, 0, 0.3);
 }
@@ -195,6 +193,7 @@ button[class^="max"]:hover {
 
 button[class^="max"]:active {
   background-color: #dd6262;
+}
 
 button[class^="max"] i {
   color: #fff;
