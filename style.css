@@ -181,7 +181,7 @@ p.winScore {
 
 button[class^="max"] {
   z-index: 9;
-  background-color: #8498a7;
+  background-color: #EB4D4D;
   width: 30px;
   height: 30px;
   text-align: center;
@@ -190,12 +190,11 @@ button[class^="max"] {
 }
 
 button[class^="max"]:hover {
-  background-color: #90a2b0;
+  background-color: #dd6262;
 }
 
 button[class^="max"]:active {
-  background-color: #90a2b0;
-}
+  background-color: #dd6262;
 
 button[class^="max"] i {
   color: #fff;
